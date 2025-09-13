@@ -30,10 +30,12 @@ if(in == NULL){
 Node* next = in -> next;
 split(next, odds, evens);
 
+//check if even and put it to the evens list
 if(in -> value % 2 == 0){
   in -> next = evens;
   evens = in;
 }
+//check if odds and put it to the odds list
 else{
   in -> next = odds;
   odds = in;
